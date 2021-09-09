@@ -15,7 +15,7 @@ object SparkExample {
 
     val rdd = spark.sparkContext.parallelize(Array(1, 2, 3))
     rdd.foreach(x => longAcc.add(x))
-    println(longAcc.value)
+    println(s"accumulator count: ${longAcc.value}")
   }
 
 }
